@@ -127,12 +127,11 @@ QuizMaster adalah platform kuis interaktif berbasis web yang dirancang untuk mem
 ### Timeline
 
 ```
-Week 1-2: Planning & Analysis
-Week 3-4: Design (UML, Mockups)
-Week 5-8: Development Sprint 1 (Core Features)
-Week 9-10: Development Sprint 2 (Admin Features)
-Week 11: Testing & Bug Fixes
-Week 12: Deployment & Documentation
+Minggu 1: Planning & Analysis
+Minggu 2: Design (UML, Mockups)
+Minggu 3-5: Development Sprint 1 (Core Features)
+Minggu 6-7: Development Sprint 2 (Admin Features)
+Minggu 8: Testing, Bug Fixes & Deployment
 ```
 
 ---
