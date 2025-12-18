@@ -58,7 +58,10 @@ class QuizSeeder extends Seeder
         ];
 
         foreach ($quizzes as $quiz) {
-            Quiz::create($quiz);
+            Quiz::firstOrCreate(
+                ['slug' => $quiz['slug']],
+                $quiz
+            );
         }
 
         $this->command->info('6 Quizzes berhasil dibuat!');
