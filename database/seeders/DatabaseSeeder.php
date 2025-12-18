@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AdminSeeder::class,
             QuizSeeder::class,
-            QuestionSeeder::class,
         ]);
     }
 }
