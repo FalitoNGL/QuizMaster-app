@@ -138,28 +138,101 @@ Minggu 8: Testing, Bug Fixes & Deployment
 
 ## 🚀 Instalasi
 
+### Prerequisites
+
+Pastikan Anda sudah menginstall:
+- **PHP** >= 8.2
+- **Composer** >= 2.0
+- **Node.js** >= 18.0
+- **NPM** >= 9.0
+- **Git**
+
+### Langkah 1: Clone Repository
+
 ```bash
-# Clone repository
 git clone https://github.com/FalitoNGL/QuizMaster-app.git
 cd QuizMaster-app
+```
 
-# Install dependencies
+### Langkah 2: Install Dependencies
+
+```bash
+# Install PHP dependencies
 composer install
+
+# Install Node.js dependencies
 npm install
+```
 
-# Setup environment
+### Langkah 3: Konfigurasi Environment
+
+```bash
+# Copy file environment
 cp .env.example .env
-php artisan key:generate
 
-# Database
+# Generate application key
+php artisan key:generate
+```
+
+**Edit file `.env`** dan sesuaikan konfigurasi database:
+
+```env
+DB_CONNECTION=sqlite
+# atau untuk MySQL:
+# DB_CONNECTION=mysql
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=quizmaster
+# DB_USERNAME=root
+# DB_PASSWORD=
+```
+
+### Langkah 4: Setup Database
+
+```bash
+# Buat file database SQLite (jika menggunakan SQLite)
+touch database/database.sqlite
+
+# Jalankan migrasi dan seeder
 php artisan migrate --seed
 
-# Build assets
+# Link storage untuk upload file
+php artisan storage:link
+```
+
+### Langkah 5: Build Assets
+
+```bash
+# Build untuk production
 npm run build
 
-# Run server
+# atau untuk development (dengan hot reload)
+npm run dev
+```
+
+### Langkah 6: Jalankan Server
+
+```bash
 php artisan serve
 ```
+
+Aplikasi akan berjalan di: **http://localhost:8000**
+
+### 🔐 Default Account
+
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | admin@quizmaster.com | admin123 |
+| User | user@quizmaster.com | password |
+
+### ⚠️ Troubleshooting
+
+| Error | Solusi |
+|-------|--------|
+| `SQLSTATE: no such table` | Jalankan `php artisan migrate:fresh --seed` |
+| `Vite manifest not found` | Jalankan `npm run build` |
+| `Permission denied` | Jalankan `chmod -R 775 storage bootstrap/cache` |
+| `Class not found` | Jalankan `composer dump-autoload` |
 
 ---
 
