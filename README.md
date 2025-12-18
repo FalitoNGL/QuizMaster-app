@@ -222,8 +222,8 @@ Aplikasi akan berjalan di: **http://localhost:8000**
 
 | Role | Email | Password |
 |------|-------|----------|
-| Admin | admin@quizmaster.com | admin123 |
-| User | user@quizmaster.com | password |
+| Admin | admin@quizmaster.com | password123 |
+| User | user@quizmaster.com | password123 |
 
 ### ⚠️ Troubleshooting
 
