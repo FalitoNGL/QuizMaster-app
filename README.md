@@ -83,6 +83,10 @@ QuizMaster adalah platform kuis interaktif berbasis web yang dirancang untuk mem
 
 ![Sequence Diagram](docs/diagrams/sequence_diagram.drawio.png)
 
+### ERD (Entity Relationship Diagram)
+
+![ERD Diagram](docs/diagrams/erd_diagram.drawio.png)
+
 ---
 
 ## 🎨 Mock-Up / Screenshots
@@ -248,6 +252,13 @@ quiz_answers   → User answers
 achievements   → Badge definitions
 categories     → Quiz categories
 ```
+
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
